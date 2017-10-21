@@ -4,8 +4,74 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9829d10d74abc5222ff9447b86ccb56b",
+    "content-hash": "1acbc3f2d039b0a14ce1859fd23b97dd",
     "packages": [
+        {
+            "name": "goetas-webservices/xsd-reader",
+            "version": "dev-static-analysis",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SignpostMarv/xsd-reader.git",
+                "reference": "ae4331a772e6203e31b3b3361c6d464cc9aa219e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SignpostMarv/xsd-reader/zipball/ae4331a772e6203e31b3b3361c6d464cc9aa219e",
+                "reference": "ae4331a772e6203e31b3b3361c6d464cc9aa219e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-static-analysis": "0.3-dev",
+                    "dev-master": "0.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GoetasWebservices\\XML\\XSDReader\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "GoetasWebservices\\XML\\XSDReader\\Tests\\": "tests/"
+                }
+            },
+            "scripts": {
+                "tests": [
+                    "php ./vendor/phpunit/phpunit/phpunit -v",
+                    "phpstan analyse -l7 src",
+                    "psalm"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Asmir Mustafic",
+                    "email": "goetas@lignano.it"
+                }
+            ],
+            "description": "Read any XML Schema (XSD) programmatically with PHP",
+            "keywords": [
+                "parser",
+                "php",
+                "xml",
+                "xmlschema",
+                "xsd"
+            ],
+            "support": {
+                "source": "https://github.com/SignpostMarv/xsd-reader/tree/static-analysis"
+            },
+            "time": "2017-10-21T00:37:43+00:00"
+        },
         {
             "name": "symfony/event-dispatcher",
             "version": "v3.3.10",
@@ -1439,7 +1505,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "goetas-webservices/xsd-reader": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

@@ -9,8 +9,15 @@
             "email": "goetas@gmail.com"
         }
     ],
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/SignpostMarv/xsd-reader.git"
+		}
+	],
     "require": {
         "php": ">=5.6",
+        "goetas-webservices/xsd-reader": "dev-static-analysis",
         "symfony/event-dispatcher" : "^2.4||^3.0"
     },
     "require-dev" : {
