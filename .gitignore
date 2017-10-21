@@ -4,3 +4,4 @@
 /.buildpath
 /cover
 .idea
+/composer.lock
